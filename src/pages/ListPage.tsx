@@ -15,9 +15,11 @@ export const ListPage: React.FC = () => {
   }, [debouncedSearchTerm, fetchForms]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">Anamnesis Forms</h1>
+    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 overflow-x-auto">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-0">
+          Anamnesis Forms
+        </h1>
         <Link to="/create">
           <div className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-150 ease-in-out">
             Create New Form
@@ -49,7 +51,9 @@ export const ListPage: React.FC = () => {
       )}
 
       {forms && forms.length > 0 ? (
-        <AnamnesisFormList forms={forms} />
+        <div className="overflow-x-auto">
+          <AnamnesisFormList forms={forms} />
+        </div>
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-500 text-xl">

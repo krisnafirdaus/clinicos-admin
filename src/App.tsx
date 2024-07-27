@@ -8,7 +8,7 @@ import { UpdatePage } from "./pages/UpdatePage";
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="flex flex-col min-h-screen bg-gray-100">
         <nav className="bg-white shadow-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
@@ -36,7 +36,7 @@ const App: React.FC = () => {
           </div>
         </nav>
 
-        <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 h-[89vh]">
+        <main className="flex-1 max-w-full mx-auto py-6 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="px-4 py-6 sm:px-0">
             <Routes>
               <Route path="/" element={<ListPage />} />
