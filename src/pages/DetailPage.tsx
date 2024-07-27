@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { AnamnesisFormDetail } from '../components/AnamnesisForm/AnamnesisFormDetail';
 import { useAnamnesisForm } from '../hooks/useAnamnesisForm';
